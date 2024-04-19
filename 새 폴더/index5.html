@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+    <style>
+        body{
+            height: 100vh;/*vh view height/ vw view width*/
+            display: flex;
+            /*나 자신이 먹는게 아니라 엄마가 먹음. 컨텐츠 키를 똑같이 만들어줘서 레이아웃을 예쁘게 만들어줌*/
+            align-items: center;/*Y축*/
+            justify-content: center;/*X축*/
+        }
+        button{
+            background-color: transparent;
+            color: black;
+            font-size: 2rem;
+            padding: 0.5rem 2rem;
+            border-radius: 100px;
+            border: 3px solid black;
+            transition: 0.5s;/*버튼을 올렸을때, 땔 때 에니메이션들어감*/
+        }
+        button:hover{ /*버튼을 올렸을 때*/
+            background-color: black;
+            color: white;
+            border-radius: 0; 
+        }
+    </style>
+</head>
+<body>
+    <button>HOVER</button> 
+    <!-- hover 오버랩되어 나타나는 것 -->
+</body>
+</html>
