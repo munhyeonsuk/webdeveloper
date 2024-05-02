@@ -1,0 +1,13 @@
+#hd{
+    border-bottom: 1px solid black;
+    padding: 1rem;
+}
+.gnb li{margin: 0 1rem;}
+.util {font-size: 0.8rem;}
+.util li{margin-left: 0.5rem;}
+.gnb li{border-top: 1px solid white;}
+.gnb li:hover{border-top-color: red;}
+.gnb li:hover a{
+    color: red;
+}
+
