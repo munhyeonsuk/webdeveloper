@@ -1,0 +1,26 @@
+.img-fluid{
+    max-width: 100%;
+}
+#mainBanner{
+    background-image: url("../img/0429bg.png");
+    height: 100vw;
+    max-height: 800px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+    transition: 0.5s;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+}
+#mainBanner:hover{
+    background-size: auto 150%;
+}
+@media (max-width:991px) {
+    h2 span{
+        display: none;
+        /*화면이 991보다 작아지면 span 안나탐*/
+    }
+}
