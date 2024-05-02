@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'KyoboHandwriting2023wsa';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404-2@1.0/KyoboHandwriting2023wsa.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    font-family: 'KyoboHandwriting2023wsa';
+    color: #1f1f1f;
+    line-height: 2;
+    letter-spacing: -0.085em;
+    margin: 0;
+    padding: 0;
+}
+//*  *모든 
+a{
+    color: black;
+    text-decoration: none;
+}
+//공통변수
+
+
+
+// 공통클래스
+.container{
+    max-width: 1280px;
+    // 그냥 width일때는 1280이하 일때 스크롤 터짐, max-width할때는 1280이하여도 100%로 보임(스크롤X)*/
+}
+.mx-auto{
+    margin: 0 auto;
+}
+.d-flex{
+    display: flex;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.bg-white{
+    background-color: white;
+}
+.border-bottom{
+    border-bottom: 1px solid #ccc;
+}
+
+li{
+    list-style: none;
+}
+//커스터마이징
+#hd{
+    .hd_container{
+        h1{
+            a{
+
+            }
+        }
+        .util{
+            li{
+                a{
+                
+                }
+            }
+        }
+    }
+}
+#gnb{
+    li{
+        a{
+        color: red;
+        }
+    }
+}
+//뎁스가 길면 충돌날 수 있음 #gnb는 #hd와 아이디가 다르기 때문에 따로 빼올 수 있음
+
+
+#noticeSwiper{
+    .notice{
+        li{
+            background-color: red;
+            &:nth-child(1){ //& 나 자신이라서 li 첫번째
+                background-color: yellow;
+            }
+            //nth-child는 순서 1부터 시작/ &뺴고 nth-child(1)로하면 a태그에 적용
+        }
+    }
+    > div{ //자손 선택자, 띄어쓰기는 후손선택자
+        width: 50%;
+    }
+}
