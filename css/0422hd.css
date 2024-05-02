@@ -1,0 +1,37 @@
+body{
+    font-family: 'Noto Sans KR';
+    font-weight: 400; /*weight이 있으면 꼭 넣기*/
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#hd{
+    height: 100px;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: row-reverse;
+    /*부모에게 줘서 자식에게 적용 x,y축을 동시에 제어*/
+     justify-content:space-between;
+     align-items: center;
+     padding:0 30px; /*상하 좌우*/
+
+}
+#hd h1{
+
+}
+#hd ul{
+    display: flex;
+    font-size: 36px;
+    letter-spacing: -0.085em; /*rem은 body를 기준, em은 나를 기준->여기서는 36px 기준*/
+}
+#hd ul li {
+   margin-left: 85px;
+}
+#hd li:hover a{
+    background-color: red;
+    color: white;
+    line-height: 100px;
+}
+
+

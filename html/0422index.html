@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+    <!-- link:css -->
+    <link rel="stylesheet" href="../css/0422default.css?work=mhs&sdate=0422">
+    <!-- ?앞까지 파일명 뒤에는 워커, 이어서 말할때& -->
+    <!-- 변수(바뀌는 값)는 숫자로 시작할 수 없음, 대소문자 구분 -->
+    <!-- work=mhs&sdate=0422라고 정하는 것이 쿼리스트링 규약  -->
+</head>
+<body>
+    <!-- 순위=>아래가 우선순위/ !important>id>class>태그 -->
+    <!-- .inlinetag =>div 생략가능 -->
+    <!-- <div class="inlinetag"></div> -->
+    <!-- .inlinetag>h2+ul>li*5 -->
+    <div class="inlinetag">
+        <h2>인라인태그</h2>
+        <ul>
+            <li>a <span>필수옵션 href</span></li>
+            <li>button</li>
+            <li>img <span>필수옵션 src</span></li>
+            <li>input <span>필수옵션 type</span></li>
+            <li>span</li>
+        </ul>
+    </div>
+    <div class="blocktag">
+        <h2>블럭태그</h2>
+        <ul>
+            <li>div <span>엠잇생략 가능</span></li>
+            <li>ul</li>
+            <li>li </li>
+            <li>p</li>
+            <li>h2</li>
+        </ul>
+    </div>
+</body>
+</html>
