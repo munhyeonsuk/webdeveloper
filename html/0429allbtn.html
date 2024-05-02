@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>positionabsolute/ click 이벤트/ transform/</title>
+    <style>
+        #animationAllbtn{
+            position: absolute;
+            border: 0;
+            width: 2.8rem;
+            height: 1.5rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+        #animationAllbtn::before{
+            top: 0;
+        }
+        #animationAllbtn::before,
+        #animationAllbtn::after{
+            content:"";
+            /*중요 컨텐츠 아님*/
+            display: block;
+            height: 3px;
+            background-color: black;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            transition: 0.5s;
+        }
+        #animationAllbtn:after{
+            bottom: 0;
+        }
+        #animationAllbtn span{
+            display: block;
+            height: 3px;
+            background-color: black;
+            /*absolute에서는 마진이 잘 안먹힘 마진을 relative와 씀, 패딩은 상관없지만 마이너스개념 없음*/
+            width: 100%;
+            transition: 0.5s;
+        
+        }
+
+        #animationAllbtn.show span{
+            width: 0;
+        }
+        #animationAllbtn.show:before{
+            transform: rotate(-45deg);
+            top: 12px;
+        }
+        #animationAllbtn.show:after{
+            transform: rotate(45deg);
+            top: 13px;
+        }
+    
+    
+    </style>
+    
+</head>
+<body>
+    <button id="animationAllbtn">
+        <span></span>
+    </button>
+    <script>
+        let status = true;
+        document.getElementById("animationAllbtn").addEventListener('click', function(){
+            status = !status;
+            document.getElementById("animationAllbtn").classList.toggle("show", !status);
+        });
+    </script>
+</body>
+</html>
