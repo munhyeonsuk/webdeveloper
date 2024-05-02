@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- seo -->
+    <meta name="description" content="" /> 
+    <meta property="og:locale" content="ko_KR" /> 
+    <meta property="og:site_name" content="" /> 
+    <meta property="og:url" content=""/> 
+    <meta property="og:type" content="website" /> 
+    <meta property="og:title" content="" /> 
+    <meta property="og:description" content="" /> 
+    <meta property="og:image" content="" />
+
+    <!-- 파비콘 바로가기 -->
+    <link rel="shortcut icon" type="image/x-icon" href="" />
+    <link rel="apple-touch-icon" href="" />
+    <link rel="apple-touch-icon-precomposed" href="">
+    <meta name="msapplication-TileImage" content="" size="270x270" />
+
+    <!-- 텍스트 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/fonts.css">
+
+    <!-- font icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- 초기화 -->
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
+    <!-- 그리드 시스템 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- 플러그인 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- 커스터마이징 -->
+    <link rel="stylesheet" href="../css/0426sindorimbasecommon.css">
+    <link rel="stylesheet" href="../css/0426sindorimbasemhs.css">
+    <!-- 팀원들의 스타일 -->
+</head>
+<body>
+    <!-- .container.d-flex>.col-6.bg-light>h2{공지사항}+ul>li*5>a{공지사항 제목들} -->
+    <div class=" container d-flex" id="tabSection">
+        <div class="bg-light noticelist col-6 d-flex flex-column justify-content-center align-items-center">
+            <h2>공지사항</h2>
+            <ul>
+                <li><a href="">공지사항 제목들</a></li>
+                <li><a href="">공지사항 제목들</a></li>
+                <li><a href="">공지사항 제목들</a></li>
+                <li><a href="">공지사항 제목들</a></li>
+                <li><a href="">공지사항 제목들</a></li>
+            </ul>
+        </div>
+        <div class="col-6 border" id="swiperReview">
+            <div class="swiper">
+
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide bg-warning d-flex justify-content-center align-items-center ">첫번째 배너</div>
+                  <div class="swiper-slide bg-dark text-white d-flex justify-content-center align-items-center">두번쨰 배너</div>
+                  <div class="swiper-slide bg-light d-flex justify-content-center align-items-center">세번째 배너</div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+ <script>
+    // 스크립트 식은 태그가 있어야 실행할 수 있음. 이어서 이야기할때 ,묶음/ 키:벨류 묶어서
+    const swiper = new Swiper('#swiperReview .swiper', {
+                                loop: true,
+                                pagination: {
+                                    el: '.swiper-pagination',
+                                    clickable: true,
+                                },
+                                autoplay: {
+                                delay: 2500, //2.5초로
+                                disableOnInteraction: false,
+                               },
+                      });
+</script>
+</body>
+</html>
+
