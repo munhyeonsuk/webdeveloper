@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper.rwa{
+            position: relative;
+            height: 0; /*여기가 제일 중요. 너비를 참조하기 위해서 반드시 높이가 없어야 함*/
+            padding-top: 56%; /*너비를 기준으로 56%*/
+            /*height: 56%로 하면 되지 않느냐 라고 생각하지만 height는 %가 relative일 때 안먹힘*/
+
+        }
+        .rwa iframe{
+            position: absolute;
+            left:0;
+            width:100%;
+            top:0;
+            height:100%;
+
+        }
+
+        .imgwrapper{
+            background: url(https://kcompony7.jpg3.kr/web/pigment/banner/pc.jpg) no-repeat center;
+            height:0;
+            padding-top: 43%;
+            background-size: cover;
+            position: relative;            
+        }
+        .imgwrapper h2{
+            position: absolute;
+            left:0; top:0; right:0; bottom:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4vw;
+        }
+
+        /*패딩으로 높이를 생성했을 때 자식 div가 abs이기*/
+    </style>
+</head>
+<body>
+   
+
+    <div class="imgwrapper">
+        <h2>배경 반응형처리하기</h2>
+    </div>
+    <div class="wrapper rwa">
+        <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/qDoD3psvJho?si=LG62TdnmOA5isGZd" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+
+
+   
+</body>
+</html>
