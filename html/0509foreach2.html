@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 처리하기</title>
+</head>
+<body>
+    <ul style="display: flex;">
+        <li>다중리스트 처리하기1</li>
+        <li>다중리스트 처리하기2</li>
+        <li>다중리스트 처리하기3</li>
+        <li>다중리스트 처리하기4</li>
+        <li>다중리스트 처리하기5</li>
+    </ul>
+   <script>
+    const menulist = ['html/css3','ECMA5','JQuery','react','Figma'];
+    //0번째 자리 네이버 첫번째 다음, 두번째 자리 구글..
+    document.querySelectorAll("ul li").forEach(function(el,idx){
+        el.innerHTML = menulist[idx];
+        // console.log("el",el,"idx",idx) +이어서 들어간다 =초기화
+        el.addEventListener('mouseenter',function(){
+           el.style.color = "red";
+        });
+        el.addEventListener('mouseleave', function(){
+            el.style.color = "black";
+            })
+        })
+   </script>
+</body>
+</html>
