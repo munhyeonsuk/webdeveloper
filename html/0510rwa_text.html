@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textContent</title>
+    <style>
+        .mobile{
+                display: none;
+        }
+        @media (max-width:619px){
+        .pc{
+            display:none;
+        }
+        .mobile{
+                display: block;
+        }
+    }
+        @media (max-width:620px) {
+            .br620{
+                display: block;
+                line-height: 0 !important;
+                font-size: 0 !important;
+                color:transparent !important
+            }        
+        }
+        @media (max-width:420px) {
+            .br420{
+                display: block;
+                line-height: 0 !important;
+                font-size: 0 !important;
+                color:transparent !important
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    <P class="first">
+        <span class="pc">개개인에 맞는 정확한 진단 및 1:1 원장님 상담</span>
+        <span class="mobile">1:1 원장님 상담</span>
+    </P>
+    <P class="second">
+        <span>개개인에 맞는 <span class="br420"></span>정확한 진단 <span class="br620">및</span> 1:1 원장님 상담</span>
+    </P>
+</body>
+</html>
