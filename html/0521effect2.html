@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마카펜효과</title>
+    <style>
+         h1 span{
+            position: relative;
+         }        
+         h1 > span:before{
+            content: "";
+            position: absolute;
+            left:0;
+            bottom:0;
+            height:100%;
+            width:0;
+            background-color: #ffff00;
+            transition: 0.5s;
+            animation: widthani 0.5s;
+            animation-delay: 0.5s;
+            animation-fill-mode: forwards;
+         }   
+         @keyframes widthani{
+            0%{
+               width:0;
+            }            
+            100%{
+               width:100%
+            }
+         }
+    </style>
+</head>
+<body>
+    
+    <h1>강조에는 이 <span>
+                     <!-- 마카펜 // 포지션이 있으면 태그의 순서상관없이 위로 올라온다 -->
+                     <span>효과</span>
+                   </span>가 짱이지
+    </h1>
+
+</body>
+</html>
