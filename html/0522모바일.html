@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형을 고려한 테이블구조의 레이아웃</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        ul,li,dl,dt,dd{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .checksvg::before{
+            content: "";
+            display: block;
+            width: 3rem;
+            height: 3rem;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-check2-square' viewBox='0 0 16 16'%3E%3Cpath d='M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z'/%3E%3Cpath d='m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0'/%3E%3C/svg%3E");
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+        .d-flex{
+            display: flex;
+        }
+
+        dd:hover:before{
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-check2-square' viewBox='0 0 16 16'%3E%3Cpath fill='red' d='M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z'/%3E%3Cpath fill='red' d='m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0'/%3E%3C/svg%3E");
+        }
+        #about{
+            height: 56vw;
+            background: url(../img/백그라운드이미지.jpg) no-repeat center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        @media (max-width:990px) {
+            #about{
+                height: calc(100vw + 50px);
+                flex-direction: column;
+                background-image: url(../img/모바일백그라운드이미지.jpg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <p class="checksvg">
+        배경이미지로 svg 처리했다
+    </p>
+    <!-- d1>dt{타이틀컨텐츠}+dd.checksvg.d-flex*5>span{리스트들} -->
+    <dl>
+        <dt>타이틀컨텐츠</dt>
+        <dd class="checksvg d-flex"><span>리스트들</span></dd>
+        <dd class="checksvg d-flex"><span>리스트들</span></dd>
+        <dd class="checksvg d-flex"><span>리스트들</span></dd>
+        <dd class="checksvg d-flex"><span>리스트들</span></dd>
+        <dd class="checksvg d-flex"><span>리스트들</span></dd>
+    </dl>
+    <section id="about">
+        <h2>타이틀 소개글 노출</h2>
+    </section>
+
+</body>
+</html>

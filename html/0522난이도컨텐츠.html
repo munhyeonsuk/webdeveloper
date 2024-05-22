@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형을 고려한 테이블구조의 레이아웃</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        ul,li,dl,dt,dd{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .checksvg::before{
+            content: "";
+            display: block;
+            width: 3rem;
+            height: 3rem;
+            background: url(../img/check.svg);
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+        .d-flex{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <p class="checksvg">
+        배경이미지로 svg 처리했다
+    </p>
+    <!-- d1>dt{타이틀컨텐츠}+dd.checksvg.d-flex*5>span{리스트들} -->
+    <dl>
+        <dt>타이틀컨텐츠</dt>
+        <dd class="checksvg d-flex"><span>리스트들</span></dd>
+        <dd class="checksvg d-flex"><span>리스트들</span></dd>
+        <dd class="checksvg d-flex"><span>리스트들</span></dd>
+        <dd class="checksvg d-flex"><span>리스트들</span></dd>
+        <dd class="checksvg d-flex"><span>리스트들</span></dd>
+    </dl>
+
+</body>
+</html>
