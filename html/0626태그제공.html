@@ -16,12 +16,12 @@
         /* swiper-wrapper */
         .banner ul{
             display: flex;
-            width: calc(100vw *3);
+            transition: 0.4s;
+           
         }
 
          /* swiper-slide */
         .banner li{ 
-            width: 100vw;
             height: 600px;
         }
         .banner li:nth-child(1){
@@ -54,15 +54,23 @@
     </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script>
-        $(".btns button").on('click', function(){
-            alert($(this).index())
-        })
-
         // $(".btns button").each(function(){
         //     $(this).on('click', function(){
         //         alert($(this).index())
         //     })
         // })
+        
+
+        const aniw = $(document).width(); //현재 문서의 너비를 저장    
+        const lis = $(".banner li").length; // li들의 개수 3
+        $(".banner li").width(aniw); //swiper slide /body 너비만큼
+        $(".banner ul").width(aniw *3) //swiper wrapper
+
+        $(".btns button").on('click', function(){
+            //alert($(this).index()) 확인
+            $(".banner ul").css("marginLeft", -aniw * $(this).index())
+            
+        })
     </script>
 </body>
 </html>
