@@ -40,13 +40,10 @@
         }
         .btns button{
             border: 0;
-            font-size: 0;
-            line-height: 0;
             display: block;
-            width: 20px;
-            height: 20px;
-            border-radius: 10px;
+            color: white;
             background-color: #666;
+            padding: 0 15px;
             margin: 0 10px;
             cursor: pointer;
             transition: 0.5s;
@@ -54,16 +51,15 @@
         .btns button.on{
             background-color: red;
             cursor: default;
-            width: 50px;
         }
     </style>
 </head>
 <body>
     <div class="banner">
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li data-msg="초특가 이벤트"></li>
+            <li data-msg="멤버쉽 안내"></li>
+            <li data-msg="구독신청"></li>
         </ul>
         <div class="btns">
             <!-- <button class="on">1</button>
@@ -92,10 +88,14 @@
         // })
 
         //for로 할 때 스피드가 더 빠르고 좋음
-       for(let x=0; x<lis; x++){
-        btnsbutton += `<button>${x + 1}</button>`
-       }
-
+        //for(let x=0; x<lis; x++){
+        //btnsbutton += `<button>${x + 1}</button>`
+        //}
+        
+        // each로 할 때
+        $(".banner li").each(function(idx, ele){ // each 앞 순번, 뒤 객체
+            btnsbutton += `<button>${$(this).data("msg")}</button>`;
+        })
 
 
         $(".btns").html(btnsbutton)
