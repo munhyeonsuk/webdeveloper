@@ -26,10 +26,11 @@
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
     <script>
-        //li가 5개인 태그에서 마지막 li만 border-bottom이라는 클래스를 삽입하고 싶음
+        //li 모두 border-bottom mb-3, 단 마지막 li만 mb-3 넣지 말라
        const totalli = $(".notice li").length;
         $(".notice li").each(function(){
-            if($(this).index() === totalli - 1) $(this).addClass("border-bottom")
+            const licls = $(this).index() === totalli - 1 ? "border-bottom" : "border-bottom mb-3"
+            $(this).addClass(licls)
        })
     </script>
 </body>
