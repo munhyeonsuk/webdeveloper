@@ -87,11 +87,14 @@
         
         let btnsbutton = "";
         //each로 할 때
-        $(".banner li").each(function(idx, ele){ // each 앞 순번, 뒤 객체
-            btnsbutton += `<button>${idx + 1}</button>`;
-        })
+        // $(".banner li").each(function(idx, ele){ // each 앞 순번, 뒤 객체
+        //     btnsbutton += `<button>${idx + 1}</button>`;
+        // })
 
         //for로 할 때 스피드가 더 빠르고 좋음
+       for(let x=0; x<lis; x++){
+        btnsbutton += `<button>${x + 1}</button>`
+       }
 
 
 
