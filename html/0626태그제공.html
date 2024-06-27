@@ -66,9 +66,9 @@
             <li></li>
         </ul>
         <div class="btns">
-            <button class="on">1</button>
+            <!-- <button class="on">1</button>
             <button>2</button>
-            <button>3</button>
+            <button>3</button> -->
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -84,6 +84,18 @@
         const lis = $(".banner li").length; // li들의 개수 3
         $(".banner li").width(aniw); //swiper slide /body 너비만큼
         $(".banner ul").width(aniw *3) //swiper wrapper
+        
+        let btnsbutton = "";
+        //each로 할 때
+        $(".banner li").each(function(idx, ele){ // each 앞 순번, 뒤 객체
+            btnsbutton += `<button>${idx + 1}</button>`;
+        })
+
+        //for로 할 때 스피드가 더 빠르고 좋음
+
+
+
+        $(".btns").html(btnsbutton)
 
         $(".btns button").on('click', function(){
             //alert($(this).index()) 확인
