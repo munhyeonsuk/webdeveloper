@@ -9,11 +9,14 @@
             margin: 0;
             padding: 0;
         }
+        .on{
+            color: red;
+        }
       
     </style>
 </head>
 <body>
-    .notice li, .notice > li, ul.notice > li, body ul.notice > li
+    <!-- .notice li, .notice > li, ul.notice > li, body ul.notice > li -->
 
     <ul class="notice">
         <li>텍스트</li>
@@ -29,14 +32,15 @@
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
     <script>
-    //네이버로 노출되면 클릭 새창으로
-    const inserdb ={
-        "href" : "http://www.naver.com",
-        "target" : "_black"
-    }
-    $("#mypage")
-    .attr(inserdb)
-    .html("네이버")
+    let count = 0
+    const lis = $(".notice li").length
+    $(".notice li").eq(count).addClass("on");
+    setInterval(function(){
+        count++;
+        count = count% lis;
+        $(".notice li").eq(count).addClass("on").siblings().removeClass("on");
+    },1000)
+
     </script>
 </body>
 </html>
