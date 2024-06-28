@@ -29,23 +29,14 @@
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
     <script>
-     //화면이 열리자마자 두번째 li만 d-none 클래스 삽입
-    $(".notice li").eq(1).addClass("d-none");
-    $(".notice li:nth-child(2)").addClass("d-none");
-    $(".notice li:first-child").next().addClass("d-none");
-    $(".notice li:first-child + li").addClass("d-none")
-
-    //첫째만 제외하고 다 들어간다
-    $(".notice li + li").addClass("d-none") 
-    $(".notice li:not(:first-chide)").addClass("d-none")
-
-    //그것만 뺴달라
-    $(".notice li:not(.gnbli)").addClass("d-none")
-
-    $(".notice li").not().addClass("d-none")
-
-    const num = 3
-    $(`.notice li:nth-child(${num})`).addClass("d-none")
+    //네이버로 노출되면 클릭 새창으로
+    const inserdb ={
+        "href" : "http://www.naver.com",
+        "target" : "_black"
+    }
+    $("#mypage")
+    .attr(inserdb)
+    .html("네이버")
     </script>
 </body>
 </html>
