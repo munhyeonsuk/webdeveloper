@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+      
+    </style>
+</head>
+<body>
+    .notice li, .notice > li, ul.notice > li, body ul.notice > li
+
+    <ul class="notice">
+        <li>텍스트</li>
+        <li>텍스트</li>
+        <li>텍스트</li>
+        <li>텍스트</li>
+        <li>텍스트</li>
+    </ul>
+    <a href="" id="mypage">마이페이지</a>
+    
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+    <script>
+     //화면이 열리자마자 두번째 li만 d-none 클래스 삽입
+    $(".notice li").eq(1).addClass("d-none");
+    $(".notice li:nth-child(2)").addClass("d-none");
+    $(".notice li:first-child").next().addClass("d-none");
+    $(".notice li:first-child + li").addClass("d-none")
+
+    //첫째만 제외하고 다 들어간다
+    $(".notice li + li").addClass("d-none") 
+    $(".notice li:not(:first-chide)").addClass("d-none")
+
+    //그것만 뺴달라
+    $(".notice li:not(.gnbli)").addClass("d-none")
+
+    $(".notice li").not().addClass("d-none")
+
+    const num = 3
+    $(`.notice li:nth-child(${num})`).addClass("d-none")
+    </script>
+</body>
+</html>
